@@ -53,13 +53,14 @@ class ViewLayout extends StatelessWidget {
       title: Text(
         contact?.name ?? "..",
         style:
-            TextStyle(color: Colors.black, fontFamily: "Arial", fontSize: 19),
+            TextStyle(color: Colors.black, fontFamily: "Caveat", fontSize: 22),
       ),
       subTitle: Text(
         "Hello",
         style: TextStyle(
+          fontFamily: "Caveat",
           color: UniversalVariables.greyColor,
-          fontSize: 14,
+          fontSize: 16,
         ),
       ),
       leading: Container(
@@ -68,20 +69,9 @@ class ViewLayout extends StatelessWidget {
           children: <Widget>[
             CachedImage(
               contact.profilePhoto,
-              radius: 60,
+              radius: 50,
               isRound: true,
             ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: Container(
-                height: 13,
-                width: 13,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: UniversalVariables.onlineDotColor,
-                    border: Border.all(color: Colors.white, width: 2)),
-              ),
-            )
           ],
         ),
       ),

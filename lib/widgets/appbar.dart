@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   const CustomAppBar({
     Key key,
-    @required this.title,
+    this.title,
     @required this.actions,
     @required this.centerTitle,
     @required this.leading,
@@ -20,9 +20,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Container(
       child: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(gradient: UniversalVariables.fabGradient),
-        ),
+        backgroundColor: Colors.green,
         leading: leading,
         elevation: 0.0,
         actions: actions,

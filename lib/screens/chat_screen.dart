@@ -48,7 +48,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: UniversalVariables.blackColor,
+      backgroundColor: Colors.black26,
       appBar: customAppBar(context),
       body: Column(
         children: <Widget>[
@@ -132,7 +132,7 @@ class _ChatScreenState extends State<ChatScreen> {
       message.message,
       style: TextStyle(
         color: Colors.white,
-        fontSize: 16.0,
+        fontSize: 20.0,
       ),
     );
   }
@@ -287,8 +287,7 @@ class _ChatScreenState extends State<ChatScreen> {
               decoration: InputDecoration(
                 hintText: "Type a message",
                 hintStyle: TextStyle(
-                  color: UniversalVariables.greyColor,
-                ),
+                    color: UniversalVariables.greyColor, fontSize: 20.0),
                 border: OutlineInputBorder(
                     borderRadius: const BorderRadius.all(
                       const Radius.circular(50.0),

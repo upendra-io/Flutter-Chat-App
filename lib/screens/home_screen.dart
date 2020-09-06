@@ -1,6 +1,5 @@
 import 'package:chat_app/provider/user_provider.dart';
 import 'package:chat_app/screens/chat_list_screen.dart';
-import 'package:chat_app/utils/universal_variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -43,8 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double _labelFontSize = 10;
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: PageView(

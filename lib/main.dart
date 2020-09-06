@@ -3,6 +3,7 @@ import 'package:chat_app/resources/firebase_repository.dart';
 import 'package:chat_app/screens/home_screen.dart';
 import 'package:chat_app/screens/login_screen.dart';
 import 'package:chat_app/screens/search_screen.dart';
+import 'package:chat_app/screens/user_profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,10 +24,12 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider<UserProvider>(
         create: (context) => UserProvider(),
         child: MaterialApp(
+            theme: ThemeData(fontFamily: "Caveat"),
             debugShowCheckedModeBanner: false,
             initialRoute: "/",
             routes: {
               "/search_screen": (context) => SearchScreen(),
+              "/user_profile": (context) => UserProfile(),
             },
             home: FutureBuilder(
                 future: firebaseRepository.getCurrentUser(),

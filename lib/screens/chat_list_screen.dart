@@ -1,12 +1,10 @@
 import 'package:chat_app/models/contacts.dart';
 import 'package:chat_app/provider/user_provider.dart';
 import 'package:chat_app/resources/firebase_methods.dart';
-import 'package:chat_app/utils/universal_variables.dart';
 import 'package:chat_app/widgets/appbar.dart';
 import 'package:chat_app/widgets/contact_view.dart';
 import 'package:chat_app/widgets/new_chat.dart';
 import 'package:chat_app/widgets/quiet_box.dart';
-import 'package:chat_app/widgets/user_circle.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +14,8 @@ class ChatListScreen extends StatelessWidget {
   CustomAppBar customAppBar(BuildContext context) {
     return CustomAppBar(
       leading: null,
-      title: UserCircle(),
-      centerTitle: true,
+      title: Text("Chat App"),
+      centerTitle: false,
       actions: <Widget>[
         IconButton(
           icon: Icon(
@@ -33,7 +31,9 @@ class ChatListScreen extends StatelessWidget {
             Icons.more_vert,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "/user_profile");
+          },
         ),
       ],
     );
@@ -67,12 +67,10 @@ class ChatListContainer extends StatelessWidget {
               return QuietBox();
             }
             return ListView.separated(
-              separatorBuilder: (context, index) {
-                Divider(
-                  color: Colors.black,
-                  indent: 10.0,
-                );
-              },
+              separatorBuilder: (context, index) => Divider(
+                color: Colors.grey,
+                indent: 70.0,
+              ),
               padding: EdgeInsets.all(10),
               itemCount: docList.length,
               itemBuilder: (context, index) {

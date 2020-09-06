@@ -16,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: UniversalVariables.blackColor,
+        backgroundColor: Colors.white,
         body: Stack(
           children: [
             Center(
@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Text(
           'Login',
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.w900, letterSpacing: 1.2),
+              fontSize: 30, fontWeight: FontWeight.w900, letterSpacing: 1.2),
         ),
         onPressed: () => performLogin(),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
