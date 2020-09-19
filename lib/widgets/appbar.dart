@@ -1,4 +1,3 @@
-import 'package:chat_app/utils/universal_variables.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
